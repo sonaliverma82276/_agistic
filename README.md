@@ -1,6 +1,6 @@
 # check_agistic
 
-#node js
+# node js
 1) cd server
 2) npm start
 
