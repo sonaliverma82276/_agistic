@@ -1,9 +1,9 @@
 # check_agistic
 
-//node js
-cd server
-npm start
+#node js
+1) cd server
+2) npm start
 
-// react js
-cd client
-npm start
+# react js
+1) cd client
+2) npm start
