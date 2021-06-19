@@ -1,0 +1,61 @@
+.main_track {
+    margin-top: 65px;
+    background-color: #e9e9e9;
+}
+body {
+    background-color: #e9e9e9;
+}
+input {
+    padding:10px;
+    border-width: 0px;
+border-radius: 30px;
+transition: all ease 0.5s;
+box-sizing: border-box;background: #f8f8f8;
+border-radius: 30px;
+transition: all ease 0.5s;
+box-sizing: border-box;
+border: 1px solid #eef0f2;
+}
+.top {
+    margin-left: 50px; margin-right: 50px; border-radius: 20px;
+    background-color: white;
+    padding:20px;
+    text-align: center; align-items: center;
+    margin-top:100px;
+}
+.submitbtn {
+border-radius: 30px;
+margin-top: 10px;
+padding: 10px;
+padding-left: 30px;
+padding-right: 30px;
+border-width: 1px;
+border-color: #467cdb;
+transition: all ease 0.5s;
+background-color: #467cdb;
+color: white;
+}
+.submitbtn:hover {
+    background-color: white;
+    color: #467cdb;
+    border-width: 1px;
+    border-color: #467cdb;
+}
+p {
+    font-size: 1rem;
+}
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.1rem;
+    }
+    p {
+    font-size: 0.9rem;
+}
+.top {
+    margin-left: 20px; 
+    margin-right: 20px; 
+}
+input {
+    width: 85%;
+}
+}
