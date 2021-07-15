@@ -13,7 +13,7 @@ class track_main extends Component {
              var id= user.uid;
              var ref = app.database().ref();
              app.database().ref('/users/' + id).once('value').then((snapshot) => {
-                // console.log(snapshot.val().type);
+                console.log(snapshot.val().type);
                 this.setState({user: snapshot.val().type});
            });
             } else {
@@ -47,7 +47,7 @@ class track_main extends Component {
                   <form onSubmit={(event) => {
                     event.preventDefault()
                     const description = this.searchPdtDescription.value
-                    this.searchProduct(description)
+                    this.props.searchProduct(description)
                   }} >
                       {/* <input type="text" name="id" id="id" style={{outline:'none'}} placeholder="13243656576" required />  */}
                       <input
@@ -90,7 +90,7 @@ class track_main extends Component {
                   </div>
               </div>
           </div>
-      </div> : null }
+      </div> : console.log(this.state.user) }
       { this.state.user =='manufacturer' ?
       <div className="row top justify-content-center align-self-center scan" id="scan" >
           <div>

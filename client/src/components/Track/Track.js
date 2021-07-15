@@ -109,12 +109,17 @@ class track_class extends Component {
     console.log(description)
   }
 
-  newItem = description => {
+  newItem = async(description) => {
+
     var date_today = new Date().toLocaleDateString()
     this.state.supplychain.methods.newItem(description, date_today).send({from: this.state.account})
+    const productId = await this.state.supplychain.methods.getProductId().call()
+    console.log("Your product ID is: " + await productId);
+    
   }
 
   addState = description => {
+    // automatically detecting location of warehouse.
     var jsonvariable, output_string;
     fetch(
       "https://geolocation-db.com/json/0fconsole.log(data)761a30-fe14-11e9-b59f-e53803842572"
@@ -139,6 +144,8 @@ class track_class extends Component {
     // var ans = await this.state.supplychain.methods.searchProduct(description).call()
     // console.log(ans)
     const data = async ()  => {
+      const sayhello = await this.state.supplychain.methods.sayHello().call()
+      console.log(sayhello)
       const got = await this.state.supplychain.methods.searchProduct(description).call();
       
       console.log(await got)

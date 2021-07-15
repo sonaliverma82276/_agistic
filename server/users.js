@@ -1,5 +1,5 @@
 const app=require('firebase/app');
-const Auth=require('firebase/Auth');
+const Auth=require('firebase/auth');
 
 const users = [];
 

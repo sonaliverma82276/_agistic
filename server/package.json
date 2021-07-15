@@ -12,7 +12,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "firebase": "^8.6.8",
+    "firebase": "^8.7.1",
+    "firebase-auth": "^0.1.2",
     "socket.io": "^2.2.0"
   }
 }
