@@ -93,7 +93,7 @@ contract SupplyChain {
         return "Hello World!";
     }
 
-    function getProductId() public returns (uint256) {
+    function getProductId() public view returns (uint256) {
         return items + 1;
     }
 

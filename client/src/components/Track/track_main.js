@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { convertBytes } from '../helpers';
 import moment from 'moment'
 import app from "../firebase/firebase.js";
+import ReactHtmlParser from 'react-html-parser';
 
 import './Track.css';
 
@@ -59,6 +60,11 @@ class track_main extends Component {
                             placeholder="Product ID"
                             required />
                       <button type="submit" className="submitbtn" style={{outline:'none'}} >Submit</button>
+                      {this.props.searchProductShow ?  <div className="justify-" > 
+                       <br></br>
+                     {ReactHtmlParser(this.props.searchProductResult)} <br></br>  
+                     {/* <Map city={this.props.city} lat={this.props.lat} long={this.props.long} />   */}
+                     </div> : null }
                      </form>
                   </div>
               </div>
@@ -68,7 +74,7 @@ class track_main extends Component {
       <div className="row top justify-content-center align-self-center add" id="add" >
           <div>
               <h2 style={{color: 'black'}}>Add New Item</h2>
-              <p>Enter Prodcut Id and location.</p>
+              <p>Enter Product Id and location.</p>
               <div>
                   <div>
                   <form onSubmit={(event) => {
@@ -86,6 +92,11 @@ class track_main extends Component {
                             placeholder="name of product..."
                             required /> 
                       <button type="submit" className="submitbtn" style={{outline:'none'}} >Add</button>
+                      {this.props.addNewItemShow ?  <div className="justify-" > 
+                       <br></br>
+                     Your product ID IS: {this.props.addNewItemResult} <br></br>  
+                     {/* <Map city={this.props.city} lat={this.props.lat} long={this.props.long} />   */}
+                     </div> : null }
                    </form>
                   </div>
               </div>
