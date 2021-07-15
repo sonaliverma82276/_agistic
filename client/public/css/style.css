@@ -314,11 +314,23 @@ figure {
   }
 }
 
-#show1,
+<<<<<<< HEAD
+/* #show1,
 #show2 {
+  display: none;
+} */
+
+=======
+/* #show1,#show2 {
   display: none;
 }
 
+#add, #scan {
+  display: none;
+} */
+
+
+>>>>>>> d10e0a545d1a9fcde4f1322c17845ab70b62c5c7
 /*
 Extra small (xs) devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap
