@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Agistic</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCdrJMB4vD1aWGOMM6r3ickS0lMQT_RJMM",
+    authDomain: "frosthackdb.firebaseapp.com",
+    projectId: "frosthackdb",
+    storageBucket: "frosthackdb.appspot.com",
+    messagingSenderId: "91260967403",
+    appId: "1:91260967403:web:7fc78a81573d359257a1ae",
+    measurementId: "G-9TEMYQ2CEK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+  <script  type="text/javascript">
+    firebase.auth().onAuthStateChanged(function(user){ 
+       if (user) { 
+  // User is signed in.
+        var id= user.uid;
+        document.getElementById('show1').style.display='block';
+        document.getElementById('show2').style.display='block';
+        } else {
+  // No user is signed in.
+  console.log("Please Sign-Up first!");
+          }
+    });
+    function logout() {
+        firebase.auth().signOut().then(() => {
+            window.location = '/';
+}).catch((error) => {
+  console.log(error);
+});
+    }
+</script>
+</html>
